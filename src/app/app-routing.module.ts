@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'models/:brandId',
     loadChildren: () => import('./pages/models/models.module').then(m => m.ModelsPageModule)
   },
+  {
+    path: 'branches/:brandId/:modelId',
+    loadChildren: () => import('./pages/branches/branches.module').then( m => m.BranchesPageModule)
+  },
 ];
 
 

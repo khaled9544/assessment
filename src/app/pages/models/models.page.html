@@ -10,7 +10,7 @@
 <ion-content fullscreen>
   <ng-container *ngIf="models.length; else noData">
     <ion-list>
-      <ion-item button [routerLink]="'/branches/'+model.id" *ngFor="let model of models">
+      <ion-item button [routerLink]="'/branches/'+brandId+'/'+model.id" *ngFor="let model of models">
         <ion-label>
           {{model.label}}
         </ion-label>
