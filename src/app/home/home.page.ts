@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.brands = this.dataService.Brands;
+    this.brands = this.dataService.Brands;
   }
 
 }
