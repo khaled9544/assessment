@@ -9,7 +9,7 @@
 <ion-content fullscreen>
   <ng-container *ngIf="brands.length; else noData">
     <ion-list>
-      <ion-item *ngFor="let brand of brands">
+      <ion-item button [routerLink]="'/models/'+brand.id" *ngFor="let brand of brands">
         <ion-avatar slot="start">
           <img [src]="brand.logo">
         </ion-avatar>

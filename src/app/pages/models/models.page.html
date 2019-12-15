@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Models</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ng-container *ngIf="models.length; else noData">
+    <ion-list>
+      <ion-item button [routerLink]="'/branches/'+model.id" *ngFor="let model of models">
+        <ion-label>
+          {{model.label}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+  <ng-template #noData>
+    <p>No data exist</p>
+  </ng-template>
+</ion-content>

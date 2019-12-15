@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-import { Model, Brand } from 'src/model/data';
-import { Brands } from 'src/constants/data';
+import { Component, OnInit } from '@angular/core';
+import { Brand } from 'src/model/data';
+import { DataService } from '../services/data.service';
+// import { AppRoutingModule } from '../app-routing.module';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  brands: Array<Brand> = Brands;
+  // applicationRouter = new AppRoutingModule();
+  brands: Array<Brand> = [];
 
-  constructor() {}
+  constructor(
+    private dataService: DataService
+  ) {}
+
+  ngOnInit() {
+    this.brands = this.dataService.Brands;
+  }
 
 }
