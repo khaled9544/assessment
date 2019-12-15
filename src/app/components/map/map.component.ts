@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Geoposition } from '@ionic-native/geolocation/ngx';
+import { Platform } from '@ionic/angular';
 declare var google: any;
 
 @Component({
@@ -10,32 +12,43 @@ declare var google: any;
 export class MapComponent implements OnInit {
 
   @ViewChild('Map', { static: true }) mapElement: ElementRef;
+  @Input() currentLocation: Geoposition;
 
-  location = { lat: 35.123890, lng: 33.512 }; // TODO Get the coordinates using the native plugin
-  map: any;
-  mapOptions: any = {}; // TODO: Create an interface inside the models dir
   apiKey: any = environment.googleAPIKey;
-  markerOptions: any = { position: null, map: null, title: null };
-  marker: any;
 
-  constructor() { }
+  constructor(
+    public platform: Platform
+  ) { }
+
+  ngOnChanges(changes) {
+    const isFirstChange: boolean = changes.currentLocation.firstChange;
+    if (isFirstChange) {
+      return;
+    }
+    const location = { lat: this.currentLocation.coords.latitude, lng: this.currentLocation.coords.longitude };
+    this.loadGoogleMap(location);
+  }
 
   ngOnInit() {
     const script = document.createElement('script');
     script.id = 'googleMap';
     script.src = 'https://maps.googleapis.com/maps/api/js?key=' + this.apiKey;
     document.head.appendChild(script);
-    this.mapOptions = {
-      center: this.location,
-      zoom: 4,
-      mapTypeControl: false
-    };
+  }
+
+  loadGoogleMap(location) {
     setTimeout(() => {
-      this.map = new google.maps.Map(this.mapElement.nativeElement, this.mapOptions);
-      this.markerOptions.position = this.location;
-      this.markerOptions.map = this.map;
-      this.markerOptions.title = 'My Location';
-      this.marker = new google.maps.Marker(this.markerOptions);
+      const markerOptions = { title: null, position: null, map: null };
+      const mapOptions = {
+        center: location,
+        zoom: 14,
+        mapTypeControl: false
+      };
+      const map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      markerOptions.position = location;
+      markerOptions.map = map;
+      markerOptions.title = 'My Location';
+      new google.maps.Marker(markerOptions);
     }, 3000);
   }
 
