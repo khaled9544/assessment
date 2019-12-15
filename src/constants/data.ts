@@ -7,14 +7,17 @@ const BMWModels: Array<Model> = [{
     description: 'lorem ipsum',
     branches: [{
         type: 'Point',
+        branchName: 'Branch name 1',
         address: 'Beirut',
         coordinates: [33.8018325, 35.4899283]
     }, {
         type: 'Point',
+        branchName: 'Branch name 2',
         address: 'Beirut',
         coordinates: [33.7933057, 35.4785199]
     }, {
         type: 'Point',
+        branchName: 'Branch name 3',
         address: 'Beirut',
         coordinates: [33.8013511, 35.4858943]
     }]

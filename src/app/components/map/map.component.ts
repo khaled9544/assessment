@@ -40,7 +40,6 @@ export class MapComponent implements OnInit {
 
   loadGoogleMap(location) {
     setTimeout(() => {
-      console.log(location);
       const mapOptions = {
         center: location,
         zoom: 14,
@@ -54,7 +53,9 @@ export class MapComponent implements OnInit {
 
   addCenterMarker(position, map) {
     const markerOptions = { title: 'My Location', position, map };
-    new google.maps.Marker(markerOptions);
+    const infowindow = new google.maps.InfoWindow();
+    const marker = new google.maps.Marker(markerOptions);
+    this.displayInfoWindowEvent(map, infowindow, 'My Location', marker);
   }
 
   addBranchesMarker(map) {
@@ -66,8 +67,19 @@ export class MapComponent implements OnInit {
         position: { lat: branch.coordinates[0], lng: branch.coordinates[1] },
         map
       };
-      new google.maps.Marker(markerOptions);
+      const infowindow = new google.maps.InfoWindow();
+      const marker = new google.maps.Marker(markerOptions);
+      this.displayInfoWindowEvent(map, infowindow, branch.branchName, marker);
     }
   }
+
+  displayInfoWindowEvent(map, infowindow, content, marker) {
+    google.maps.event.addListener(marker, 'click', function () {
+      infowindow.setContent(content);
+      infowindow.open(map, marker);
+    });
+  }
+
+
 
 }

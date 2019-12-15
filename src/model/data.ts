@@ -15,6 +15,7 @@ export interface Brand {
 
 export interface Location {
     type: GeoJSON;
+    branchName: string;
     address?: string;
     coordinates: Array<number>;
 };
