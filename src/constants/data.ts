@@ -1,32 +1,31 @@
-import { Car } from 'src/model/data';
+import { Brand } from 'src/model/data';
 
-export const Cars: Array<Car> = [{
-    model: 'x1',
-    year: 2009,
-    brand: {
-        id: 'bmw',
-        label: 'BMW',
-        logo: '/assets/brands/bmw.png'
+export const Brands: Array<Brand> = [{
+    id: 'bmw',
+    label: 'BMW',
+    logo: '/assets/brands/bmw.png',
+    models: [{
+        id: 'x1',
+        label: 'x1',
+        year: 2009,
+        description: 'lorem ipsum'
+    }, {
+        id: 'x2',
+        label: 'x2',
+        year: 2010,
+        description: 'lorem ipsum'
     },
-    description: 'lorem ipsum'
-}, {
-    model: 'x2',
-    year: 2010,
-    brand: {
-        id: 'bmw',
-        label: 'BMW',
-        logo: '/assets/brands/bmw.png'
-    },
-    description: 'lorem ipsum'
-}, {
-    model: 'x3',
-    year: 2011,
-    brand: {
-        id: 'bmw',
-        label: 'BMW',
-        logo: '/assets/brands/bmw.png'
-    },
-    description: 'lorem ipsum'
+    {
+        id: 'x3',
+        label: 'x3',
+        year: 2011,
+        brand: {
+            id: 'bmw',
+            label: 'BMW',
+            logo: '/assets/brands/bmw.png'
+        },
+        description: 'lorem ipsum'
+    }]
 }, {
     model: 'A-Class',
     year: 2014,
