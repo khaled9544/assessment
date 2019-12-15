@@ -1,14 +1,14 @@
 export interface Car {
     model: string;
     year: number;
-    brand: BrandsType;
+    brand: Brand;
     description: string;
 };
 
-export type BrandsType = 'mercedes' | 'bmw' | 'audi';
+export interface Brand {
+    id: BrandType;
+    label: string;
+    logo: string;
+};
 
-// export enum Brand {
-//     mercedes = 'mercedes',
-//     bmw = 'bmw' ,
-//     audi = 'audi'
-// };
+export type BrandType = 'mercedes' | 'bmw' | 'audi';

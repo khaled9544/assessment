@@ -1,48 +1,84 @@
 import { Car } from 'src/model/data';
 
-export const cars: Array<Car> = [{
+export const Cars: Array<Car> = [{
     model: 'x1',
     year: 2009,
-    brand: 'bmw',
+    brand: {
+        id: 'bmw',
+        label: 'BMW',
+        logo: '/assets/brands/bmw.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'x2',
     year: 2010,
-    brand: 'bmw',
+    brand: {
+        id: 'bmw',
+        label: 'BMW',
+        logo: '/assets/brands/bmw.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'x3',
     year: 2011,
-    brand: 'bmw',
+    brand: {
+        id: 'bmw',
+        label: 'BMW',
+        logo: '/assets/brands/bmw.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'A-Class',
     year: 2014,
-    brand: 'mercedes',
+    brand: {
+        id: 'mercedes',
+        label: 'Mercedes-Benz',
+        logo: '/assets/brands/mercedes.png' 
+    },
     description: 'lorem ipsum'
 }, {
     model: 'C-Class',
     year: 2019,
-    brand: 'mercedes',
+    brand: {
+        id: 'mercedes',
+        label: 'Mercedes-Benz',
+        logo: '/assets/brands/mercedes.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'G-Class',
     year: 2020,
-    brand: 'mercedes',
+    brand: {
+        id: 'mercedes',
+        label: 'Mercedes-Benz',
+        logo: '/assets/brands/mercedes.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'A3',
     year: 2008,
-    brand: 'audi',
+    brand: {
+        id: 'audi',
+        label: 'Audi',
+        logo: '/assets/brands/audi.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'S3',
     year: 2009,
-    brand: 'audi',
+    brand: {
+        id: 'audi',
+        label: 'Audi',
+        logo: '/assets/brands/audi.png'
+    },
     description: 'lorem ipsum'
 }, {
     model: 'A5',
     year: 2010,
-    brand: 'audi',
+    brand: {
+        id: 'audi',
+        label: 'Audi',
+        logo: '/assets/brands/audi.png'
+    },
     description: 'lorem ipsum'
 }];

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Car } from 'src/model/data';
+import { Cars } from 'src/constants/data';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  cars: Array<Car> = Cars;
 
   constructor() {}
 
