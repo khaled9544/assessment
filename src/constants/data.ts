@@ -9,17 +9,17 @@ const BMWModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [71.86873, -81.24260]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [54.34292, -100.65229]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [-8.51103, -80.3291]
     }]
 }, {
     id: 'x2',
@@ -30,17 +30,17 @@ const BMWModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [ 51.64409, -81.2226]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [46.24123, 121.85131]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [65.40709, -157.47197]
     }]
 },
 {
@@ -52,17 +52,17 @@ const BMWModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [41.73071, 142.32038]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [13.37425, 109.71161]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [ -25.01662, 24.50025]
     }]
 }];
 
@@ -75,17 +75,17 @@ const MercedesModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [13.76858, -88.11626]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [-6.84807, 13.76663]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [-18.49912, -43.37045]
     }]
 }, {
     id: 'g-c',
@@ -96,17 +96,17 @@ const MercedesModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [15.01156, -6.65427]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [65.29784, 155.91909]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [ 60.39271, 27.30247]
     }]
 }, {
     id: 'c-c',
@@ -117,17 +117,17 @@ const MercedesModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [23.51853, 85.58918]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [31.26771, 48.04295]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [ -31.14162, -54.86479]
     }]
 }];
 
@@ -140,17 +140,17 @@ const AudiModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [72.34303, -52.71653]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [-35.33048, 81.20665]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [58.73949, 101.85627]
     }]
 }, {
     id: 'beetle',
@@ -161,17 +161,17 @@ const AudiModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [44.20117, 8.00805]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [18.37987, -143.58500]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [30.34217,  6.23823]
     }]
 }, {
     id: 'jetta',
@@ -182,17 +182,17 @@ const AudiModels: Array<Model> = [{
         type: 'Point',
         branchName: 'Branch name 1',
         address: 'Beirut',
-        coordinates: [33.8018325, 35.4899283]
+        coordinates: [22.96117, -96.22645]
     }, {
         type: 'Point',
         branchName: 'Branch name 2',
         address: 'Beirut',
-        coordinates: [33.7933057, 35.4785199]
+        coordinates: [7.16866, 63.05658]
     }, {
         type: 'Point',
         branchName: 'Branch name 3',
         address: 'Beirut',
-        coordinates: [33.8013511, 35.4858943]
+        coordinates: [19.17004, -107.68880]
     }]
 }];
 
