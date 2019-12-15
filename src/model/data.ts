@@ -22,4 +22,4 @@ export interface Location {
 
 // Reference for the GeoJson https://docs.mongodb.com/manual/reference/geojson/
 export type GeoJSON  = 'Point' | 'LineString' | 'Polygon' | 'MultiPoint' | 'MultiLineString' | 'MultiPolygon' | 'GeometryCollection';
-export type BrandTypes = 'mercedes' | 'bmw' | 'audi';
+export type BrandTypes = 'mercedes' | 'bmw' | 'volkswagen';

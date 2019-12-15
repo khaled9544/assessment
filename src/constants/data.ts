@@ -36,18 +36,18 @@ const MercedesModels: Array<Model> = [{
 }];
 
 const AudiModels: Array<Model> = [{
-    id: 'a3',
-    label: 'A3',
+    id: 'gti',
+    label: 'Golf GTI',
     year: 2008,
     description: 'lorem ipsum'
 }, {
-    id: 's3',
-    label: 'S3',
+    id: 'beetle',
+    label: 'Beetle',
     year: 2018,
     description: 'lorem ipsum'
 }, {
-    id: 'a5',
-    label: 'A5',
+    id: 'jetta',
+    label: 'Jetta',
     year: 2005,
     description: 'lorem ipsum'
 }];
@@ -63,8 +63,8 @@ export const Brands: Array<Brand> = [{
     logo: '/assets/brands/mercedes.png',
     models: MercedesModels
 }, {
-    id: 'audi',
-    label: 'Audi',
-    logo: '/assets/brands/audi.png',
+    id: 'volkswagen',
+    label: 'Volkswagen',
+    logo: '/assets/brands/golf.png',
     models: AudiModels
 }];

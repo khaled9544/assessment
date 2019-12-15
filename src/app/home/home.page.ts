@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Car } from 'src/model/data';
-import { Cars } from 'src/constants/data';
+import { Model, Brand } from 'src/model/data';
+import { Brands } from 'src/constants/data';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { Cars } from 'src/constants/data';
 })
 export class HomePage {
 
-  cars: Array<Car> = Cars;
+  brands: Array<Brand> = Brands;
 
   constructor() {}
 
