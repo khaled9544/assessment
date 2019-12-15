@@ -47,7 +47,7 @@ const AudiModels: Array<Model> = [{
     description: 'lorem ipsum'
 }, {
     id: 'jetta',
-    label: 'Jetta',
+    label: 'J`etta',
     year: 2005,
     description: 'lorem ipsum'
 }];
