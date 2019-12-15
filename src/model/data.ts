@@ -3,7 +3,7 @@ export interface Model {
     label: string;
     year: number;
     description: string;
-    locations?: Array<Location>;
+    branches?: Array<Location>;
 };
 
 export interface Brand {

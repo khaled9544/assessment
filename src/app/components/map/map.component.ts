@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Geoposition } from '@ionic-native/geolocation/ngx';
 import { Platform } from '@ionic/angular';
+import { Location } from 'src/model/data';
 declare var google: any;
 
 @Component({
@@ -13,6 +14,7 @@ export class MapComponent implements OnInit {
 
   @ViewChild('Map', { static: true }) mapElement: ElementRef;
   @Input() currentLocation: Geoposition;
+  @Input() branchesPosition: Array<Location>;
 
   apiKey: any = environment.googleAPIKey;
 
@@ -38,18 +40,34 @@ export class MapComponent implements OnInit {
 
   loadGoogleMap(location) {
     setTimeout(() => {
-      const markerOptions = { title: null, position: null, map: null };
+      console.log(location);
       const mapOptions = {
         center: location,
         zoom: 14,
         mapTypeControl: false
       };
       const map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-      markerOptions.position = location;
-      markerOptions.map = map;
-      markerOptions.title = 'My Location';
-      new google.maps.Marker(markerOptions);
+      this.addCenterMarker(location, map);
+      this.addBranchesMarker(map);
     }, 3000);
+  }
+
+  addCenterMarker(position, map) {
+    const markerOptions = { title: 'My Location', position, map };
+    new google.maps.Marker(markerOptions);
+  }
+
+  addBranchesMarker(map) {
+    let i: number;
+    for (i = 0; i < this.branchesPosition.length; i++) {
+      const branch: Location = this.branchesPosition[i];
+      const markerOptions = {
+        title: branch.address || '',
+        position: { lat: branch.coordinates[0], lng: branch.coordinates[1] },
+        map
+      };
+      new google.maps.Marker(markerOptions);
+    }
   }
 
 }

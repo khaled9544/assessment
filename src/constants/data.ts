@@ -4,7 +4,20 @@ const BMWModels: Array<Model> = [{
     id: 'x1',
     label: 'x1',
     year: 2009,
-    description: 'lorem ipsum'
+    description: 'lorem ipsum',
+    branches: [{
+        type: 'Point',
+        address: 'Beirut',
+        coordinates: [33.8018325, 35.4899283]
+    }, {
+        type: 'Point',
+        address: 'Beirut',
+        coordinates: [33.7933057, 35.4785199]
+    }, {
+        type: 'Point',
+        address: 'Beirut',
+        coordinates: [33.8013511, 35.4858943]
+    }]
 }, {
     id: 'x2',
     label: 'x2',
