@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Brand } from 'src/model/data';
+import { Brand, Model } from 'src/model/data';
 import { Brands } from 'src/constants/data';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class DataService {
     return this.brands;
   }
 
-  getBrandModels = (id: string) => {
+  getBrandModels = (id: string): Array<Model> => {
     const brand: Brand = this.brands.find((brand: Brand) => brand.id === id);
     return brand.models;
   }
